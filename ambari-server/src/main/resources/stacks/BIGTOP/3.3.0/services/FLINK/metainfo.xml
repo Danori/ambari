@@ -21,6 +21,17 @@
     <service>
       <name>FLINK</name>
       <version>1.16.1-1</version>
+
+      <osSpecifics>
+        <osSpecific>
+          <osFamily>redhat9</osFamily>
+          <packages>
+            <package>
+              <name>flink_${stack_version}</name>
+            </package>
+          </packages>
+        </osSpecific>
+      </osSpecifics>
     </service>
   </services>
 </metainfo>

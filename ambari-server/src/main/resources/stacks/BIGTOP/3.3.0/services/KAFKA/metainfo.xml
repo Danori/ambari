@@ -21,6 +21,20 @@
     <service>
       <name>KAFKA</name>
       <version>2.8.2-1</version>
+
+      <osSpecifics>
+        <osSpecific>
+          <osFamily>redhat9</osFamily>
+          <packages>
+            <package>
+              <name>kafka_${stack_version}</name>
+            </package>
+            <package>
+              <name>ranger_${stack_version}-kafka-plugin</name>
+            </package>
+          </packages>
+        </osSpecific>
+      </osSpecifics>
     </service>
   </services>
 </metainfo>

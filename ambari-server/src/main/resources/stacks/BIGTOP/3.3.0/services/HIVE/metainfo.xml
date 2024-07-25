@@ -21,6 +21,31 @@
     <service>
       <name>HIVE</name>
       <version>3.1.3-1</version>
+
+      <osSpecifics>
+        <osSpecific>
+          <osFamily>redhat9</osFamily>
+          <packages>
+            <package>
+              <name>hive_${stack_version}</name>
+            </package>
+            <package>
+              <name>hive_${stack_version}-hcatalog</name>
+            </package>
+            <package>
+              <name>hive_${stack_version}-webhcat</name>
+            </package>
+            <package>
+              <name>ranger_${stack_version}-hive-plugin</name>
+            </package>
+            <package>
+              <name>mariadb-server</name>
+              <skipUpgrade>true</skipUpgrade>
+              <condition>should_install_mysql</condition>
+            </package>
+          </packages>
+        </osSpecific>
+      </osSpecifics>
     </service>
   </services>
 </metainfo>

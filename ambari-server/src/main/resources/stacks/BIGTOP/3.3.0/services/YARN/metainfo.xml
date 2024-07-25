@@ -22,10 +22,41 @@
     <service>
       <name>YARN</name>
       <version>3.3.5-1</version>
+
+      <osSpecifics>
+        <osSpecific>
+          <osFamily>redhat9</osFamily>
+          <packages>
+            <package>
+              <name>hadoop_${stack_version}-yarn</name>
+            </package>
+            <package>
+              <name>hadoop_${stack_version}-mapreduce</name>
+            </package>
+            <package>
+              <name>hadoop_${stack_version}-hdfs</name>
+            </package>
+            <package>
+              <name>ranger_${stack_version}-yarn-plugin</name>
+            </package>
+          </packages>
+        </osSpecific>
+      </osSpecifics>
     </service>
     <service>
       <name>MAPREDUCE2</name>
       <version>3.3.5-1</version>
+
+      <osSpecifics>
+        <osSpecific>
+          <osFamily>redhat9</osFamily>
+          <packages>
+            <package>
+              <name>hadoop_${stack_version}-mapreduce</name>
+            </package>
+          </packages>
+        </osSpecific>
+      </osSpecifics>
     </service>
   </services>
 </metainfo>

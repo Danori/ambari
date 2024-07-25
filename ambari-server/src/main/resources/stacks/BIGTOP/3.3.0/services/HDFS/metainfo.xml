@@ -22,6 +22,35 @@
       <name>HDFS</name>
       <serviceType>HDFS</serviceType> <!-- This tag is used only for main fileSystem service. It sets filesystem schema for ambari -->
       <version>3.3.5-1</version>
+
+      <osSpecifics>
+        <osSpecific>
+          <osFamily>redhat9</osFamily>
+          <packages>
+            <package>
+              <name>hadoop_${stack_version}</name>
+            </package>
+            <package>
+              <name>hadoop_${stack_version}-client</name>
+            </package>
+            <package>
+              <name>hadoop_${stack_version}-libhdfs</name>
+            </package>
+            <package>
+              <name>ranger_${stack_version}-hdfs-plugin</name>
+            </package>
+            <package>
+              <name>libtirpc-devel</name>
+            </package>
+            <package>
+              <name>snappy</name>
+            </package>
+            <package>
+              <name>snappy-devel</name>
+            </package>
+          </packages>
+        </osSpecific>
+      </osSpecifics>
     </service>
   </services>
 </metainfo>

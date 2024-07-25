@@ -21,6 +21,20 @@
     <service>
       <name>HBASE</name>
       <version>2.5.3-1</version>
+
+      <osSpecifics>
+        <osSpecific>
+          <osFamily>redhat9</osFamily>
+          <packages>
+            <package>
+              <name>hbase_${stack_version}</name>
+            </package>
+            <package>
+              <name>ranger_${stack_version}-hbase-plugin</name>
+            </package>
+          </packages>
+        </osSpecific>
+      </osSpecifics>
     </service>
   </services>
 </metainfo>

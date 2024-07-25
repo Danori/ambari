@@ -21,6 +21,20 @@
     <service>
       <name>SOLR</name>
       <version>9.1.1-1</version>
+
+      <osSpecifics>
+        <osSpecific>
+          <osFamily>redhat9</osFamily>
+          <packages>
+            <package>
+              <name>solr_${stack_version}</name>
+            </package>
+            <package>
+              <name>ranger_${stack_version}-solr-plugin</name>
+            </package>
+          </packages>
+        </osSpecific>
+      </osSpecifics>
     </service>
   </services>
 </metainfo>

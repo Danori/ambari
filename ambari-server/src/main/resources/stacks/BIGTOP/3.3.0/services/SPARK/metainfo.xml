@@ -22,6 +22,29 @@
     <service>
       <name>SPARK</name>
       <version>3.3.2-1</version>
+
+      <osSpecifics>
+        <osSpecific>
+          <osFamily>redhat9</osFamily>
+          <packages>
+            <package>
+              <name>spark_${stack_version}-core</name>
+            </package>
+            <package>
+              <name>spark_${stack_version}-python</name>
+            </package>
+            <package>
+              <name>spark_${stack_version}-history-server</name>
+            </package>
+            <package>
+              <name>spark_${stack_version}-thriftserver</name>
+            </package>
+            <package>
+              <name>spark_${stack_version}-datanucleus</name>
+            </package>
+          </packages>
+        </osSpecific>
+      </osSpecifics>
     </service>
   </services>
 </metainfo>
